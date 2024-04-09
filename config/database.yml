@@ -14,7 +14,7 @@ default: &default
   encoding: utf8
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   username: root
-  password: Maro123#
+  password: imsny123#
   socket: /var/lib/mysql/mysql.sock
 
 development:
@@ -51,4 +51,4 @@ production:
   <<: *default
   database: letsencrypt_production
   username: root
-  password: Maro123#
+  password: imsny123#

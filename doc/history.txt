@@ -1,0 +1,981 @@
+2  yum install libcurl-devel
+3  passenger-install-nginx-module --auto --auto-download --languages=ruby --prefix=/opt/nginx
+4  cd /opt/nginx/
+5  ls
+6  cd conf/
+7  ls
+8  cp nginx.conf nginx.conf.bk
+9  vim nginx.conf
+10  service nginx status
+11  systemctl status nginx
+12   service nginx restart
+13  ls
+14  cd ..
+15  ls
+16  cd sbin/
+17  ls
+18  nginx -t
+19  ./nginx -t
+20  ps aux | grep nginx
+21  nginx -s reload
+22  ./nginx -s reload
+23  ./nginx -s start
+24  systemctl -l enable nginx
+25  journalctl -xe
+26  ./nginx -t -q -g daemon on;
+27  ./nginx -t -q -g daemon on
+28  cd
+29  cd /etc/systemd/system
+30  ls
+31  vim nginx.service
+32  service status nginx.service
+33  service start nginx.service
+34  service  nginx.service status
+35  service  nginx.service start
+36  service  nginx.service status
+37  cd /opt/nginx/
+38  ls
+39  cd sbin/
+40  ls
+41  cd .
+42  cd ..
+43  ls
+44  grep -ir "nginx.pid" .
+45  cd conf/
+46  ls
+47  vim nginx.conf
+48  vim /etc/systemd/system/nginx.service
+49  service  nginx.service start
+50  systemctl daemon-reload
+51  service  nginx.service start
+52  service  nginx.service status
+53  pwd
+54  service  nginx.service stop
+55  service  nginx.service status
+56  /opt/nginx/sbin/nginx
+57  netstat -pan | grep ":80"
+58  ps aux  | grep nginx
+59  cd ..
+60  ls
+61  cd logs/
+62  ls
+63  cat nginx.pid
+64  vim /etc/systemd/system/nginx.service
+65  cd ..
+66  ls
+67  service  nginx.service status
+68  systemctl daemon-reload
+69  service  nginx.service stop
+70  service  nginx.service status
+71  service  nginx.service start
+72  service  nginx.service status
+73  ps aux  | grep nginx
+74  kill -9 4313 4316
+75  ps aux  | grep nginx
+76  service  nginx.service status
+77  service  nginx.service start
+78  service  nginx.service status
+79  ps aux  | grep nginx
+80  ls
+81  cd conf/
+82  ls
+83  vim nginx.conf
+84  cd ..
+85  ls
+86  cd logs/
+87  ls
+88  vim /etc/systemd/system/nginx.service
+89  systemctl daemon-reload
+90  service  nginx.service status
+91  service  nginx.service reload
+92  service  nginx.service restart
+93  service  nginx.service status
+94  ps aux  | grep nginx
+95  kill -9 4782 4783
+96  ps aux  | grep nginx
+97  service  nginx.service start
+98  ps aux  | grep nginx
+99  service  nginx.service status
+100  $MAINPID
+101  echo $MAINPID
+102  cat vim /etc/systemd/system/nginx.service
+103   vim /etc/systemd/system/nginx.service
+104  systemctl daemon-reload
+105  ps aux  | grep nginx
+106  kill -9 4993 4995
+107  ps aux  | grep nginx
+108  service nginx.service status
+109  service nginx.service start
+110  service nginx.service status
+111   vim /etc/systemd/system/nginx.service
+112  systemctl daemon-reload
+113  service nginx.service restart
+114  service nginx.service status
+115  ps aux  | grep nginx
+116  kill -9 5130 5132
+117  service nginx.service start
+118  service nginx.service status
+119  ls
+120  ps aux  | grep nginx
+121  cat nginx.pid
+122  ll
+123  cd ..
+124  ls
+125  cd sbin/
+126  ls
+127  nginx -s reload
+128  ./nginx -s reload
+129  cd ..
+130  ls
+131  cd conf/
+132  ls
+133  vim nginx.conf
+134  cd
+135  ls
+136  cd letsencrypt-api/
+137  ls
+138  cd public/
+139  ls
+140  pwd
+141  cd /opt/nginx/conf/
+142  vim nginx.conf
+143  cd ../sbin/nginx -t
+144  ../sbin/nginx -t
+145  ../sbin/nginx -s reload
+146  cd ..
+147  ls
+148  cd logs/
+149  ls
+150  tail -f error.log
+151  cd
+152  ll
+153  cd letsencrypt-api/
+154  ll
+155  vi /etc/selinux/config
+156  exit
+157  cd /opt/nginx/
+158  ls
+159  cd logs/
+160  ls
+161  tail -f error.log
+162  cd
+163  ls
+164  cd letsencrypt-api/
+165  ls
+166  ll
+167  chown -R  nobody:nobody public
+168  ll
+169  cd /opt/nginx/
+170  ls
+171  cd conf/
+172  ls
+173  cd ..
+174  cd sbin/
+175  ls
+176  ./nginx -s reload
+177  cd
+178  cd letsencrypt-api/
+179  ls
+180  rails c
+181  vim config/database.yml
+182  rails c
+183  rails db:create
+184  vim config/database.yml
+185  mysql -u maropost -p
+186  vim config/database.yml
+187  rails db:create
+188  rails assets:precompile
+189  touch tmp/restart.txt
+190  ls
+191  cd tmp/
+192  ls
+193  ll
+194  cd ..
+195  cd /opt/nginx/
+196  ls
+197  cd logs/
+198  ls
+199  tail -f access.log
+200  tail -f error.log
+201  ps
+202  ps aux  | grep nginx
+203  cat nginx.pid
+204  kill -9 5262
+205  ps aux  | grep nginx
+206  kill -9 31916
+207  ps aux  | grep nginx
+208  ../sbin/nginx
+209  ps aux  | grep nginx
+210  tail -f error.log
+211  cd ..
+212  ls
+213  cd
+214  cd letsencrypt-api/
+215  ls
+216  ll
+217  cd ..
+218  chmod g+x,o+x letsencrypt-api/
+219  ll
+220  which passenger-status
+221  /usr/local/rvm/gems/ruby-2.7.4@rails5/bin/passenger-status
+222  cd /opt/nginx/
+223  ls
+224  cd sbin/
+225  ls
+226  ps aux  | grep nginx
+227  kill -9 32175 32177
+228  ls
+229  ./nginx
+230  ps aux  | grep nginx
+231  tail -f ../logs/error.log
+232  cd mp
+233  cd
+234  cd letsencrypt-api/
+235  ls
+236  ll
+237  chmod g+x,o+x public
+238  ll
+239  cd /opt/nginx/
+240  ls
+241  sbin/
+242  cd sbin/
+243  ls
+244  ./nginx -s reload
+245  ps aux  | grep nginx
+246  kill -9 32339 32485
+247  ./nginx -t
+248  ./nginx
+249  ps aux  | grep nginx
+250  tail -f ../logs/error.log
+251  cd
+252  ls
+253  cd pwd
+254  pwd
+255  chmod g+x,o+x  /root
+256  cd letsencrypt-api/
+257  pwd
+258  chmod g+x,o+x  /root/letsencrypt-api
+259  cd public/
+260  pwd
+261  chmod g+x,o+x /root/letsencrypt-api/public
+262  cd
+263  ll
+264  cd /opt/nginx/logs/
+265  ls
+266  tail -f error.log
+267  cd
+268  cd letsencrypt-api/
+269  ls
+270  cat config/environments/production.rb
+271  cd config
+272  ls
+273  EDITOR=vim rails credentials:edit
+274  ls
+275  cat master.key
+276  cat config/credentials.yml.enc
+277  cat credentials.yml.enc
+278  ls
+279  cd ..
+280  vim config/environments/production.rb
+281  touch tmp/restart.txt
+282  cd /opt/nginx/sbin/
+283  ls
+284  ps aux | grep nginx
+285  kill -9 32534 32537
+286  ./nginx
+287  tail -f ../logs/error.log
+288  cat /root/letsencrypt-api/config/master.key
+289  vim ~/.bashrc
+290  cd ../conf/
+291  ls
+292  vim nginx.conf
+293  exit
+294  cd /opt/nginx/sbin/
+295  ps aux | grep nginx
+296  kill -9 580 584
+297  ./nginx
+298  cd ../logs/
+299  tail -f error.log
+300  history
+301  cd
+302  cd letsencrypt-api/
+303  vim config/routes.rb
+304  ls
+305  vim config/sidekiq.yml
+306  cd config/initializers/
+307  ls
+308  vim sidekiq.rb
+309  vim ~/.bashrc
+310  exit
+311  ls
+312  cd /opt/nginx/logs/
+313  ls
+314  tail -f error.log
+315  cd /root/letsencrypt-api/
+316  rails routes
+317  bundle
+318  ps aux | grep sidekiq
+319  rails generate controller Welcome index
+320  vim config/routes.rb
+321  touch tmp/restart.txt
+322  ps aux | grep sidekiq
+323  pwd
+324  ps aux | grep sidekiq
+325  exit
+326  ls
+327  cd letsencrypt-api/
+328  ls
+329  bundle exec sidekiq -e production -C config/sidekiq.yml
+330  ping redis
+331  ps aux  | grep redis
+332  cat /etc/hosts
+333  vim /etc/hosts
+334  ping redis
+335  bundle exec sidekiq -e production -C config/sidekiq.yml
+336  redis -v
+337  cd
+338  redis --veriosn
+339  redis-server --v
+340  redis-server -v
+341  redis-server --version
+342  sudo yum -y update
+343  sudo yum -y install http://rpms.remirepo.net/enterprise/remi-release-7.rpm
+344  sudo yum --enablerepo=remi install redis
+345  rpm -qi redis
+346   systemctl status  redis
+347  systemctl restart redis
+348   systemctl status  redis
+349  redis-server -v
+350  bundle exec sidekiq -e production -C config/sidekiq.yml
+351  cd letsencrypt-api/
+352  bundle exec sidekiq -e production -C config/sidekiq.yml
+353  cat config/sidekiq.yml
+354  bundle exec sidekiq -d -c  1 -e production -q workers -L log/workers.log
+355  vim /etc/systemd/system/sidekiq.service
+356  nano /etc/systemd/system/sidekiq.service
+357  service sidekiq.service status
+358  service sidekiq.service start
+359  service sidekiq.service status
+360  service sidekiq.service restart
+361  service sidekiq.service status
+362  dat
+363  service sidekiq.service stop
+364  service sidekiq.service enable
+365  service sidekiq.service start
+366  service sidekiq.service status
+367  exit
+368  service nginx status
+369  nano /etc/systemd/system/nginx.service
+370  yum install nano
+371  nano /etc/systemd/system/nginx.service
+372  service nginx status
+373  service nginx start
+374  systemctl daemon-reload
+375  service nginx start
+376  service nginx status
+377  ps -aux | grep nginx
+378  kill -9 860
+379  ps -aux | grep nginx
+380  ps -aux | grep 864
+381  ps -aux | grep nginx
+382  kill -9 864
+383  ps -aux | grep nginx
+384  service nginx status
+385  service nginx start
+386  service nginx status
+387  nano /etc/systemd/system/nginx.service
+388  service nginx restart
+389  systemctl daemon-reload
+390  service nginx restart
+391  service nginx status
+392  ps -aux | grep nginx
+393  cd /opt/nginx/
+394  ls -l
+395  cd conf/
+396  ls -l
+397  nano nginx.conf
+398  cd ..
+399  cd conf.d
+400  ls -l
+401  cd conf/
+402  ls -l
+403  cat nginx.conf
+404  nginx -t
+405  cd ..
+406  cd sbin/
+407  ls -l
+408  ./nginx -t
+409  cat /etc/systemd/system
+410  cat /etc/systemd/system/nginx.service
+411  cd /etc/systemd/system
+412  ls -l
+413  cd /usr/lib/systemd/system
+414  ls -l
+415  nano nginx.service
+416  cd /etc/systemd/system
+417  ls -l
+418  rm nginx.service
+419  cd /opt/nginx/conf/nginx.conf
+420  nano /opt/nginx/conf/nginx.conf
+421  cd /opt/nginx/sbin/
+422  ./nginx -t
+423  service nginx start
+424  systemctl status nginx.service
+425  systemctl status nginx
+426  service nginx status
+427  cd
+428  cp /usr/lib/systemd/system/nginx.service /etc/systemd/system/
+429  service nginx status
+430  service nginx start
+431  systemctl daemon-reload
+432  service nginx start
+433  service nginx status
+434  service nginx restart
+435  service nginx status
+436  ps -aux | grep nginx
+437  netstat -tulnp
+438  cd /opt/nginx/conf/
+439  nano nginx.conf
+440  service nginx start
+441  service nginx status
+442  service nginx restart
+443  service nginx status
+444  ps -aux | grep nginx
+445  date
+446  kill -9 3206
+447  ps -aux | grep nginx
+448  kill -9 3209
+449  ps -aux | grep nginx
+450  service nginx status
+451  service nginx restart
+452  service nginx status
+453  nano nginx.conf
+454  service nginx restart
+455  service nginx status
+456  ps -aux | grep nginx
+457  ps -aux
+458  ps -aux | grep nginx
+459  service nginx stop
+460  service nginx status
+461  service nginx start
+462  service nginx status
+463  service nginx restart
+464  service nginx status
+465  netstat -tulnp
+466  cd
+467  cd /opt
+468  ls -l
+469  cd nginx/
+470  ls -l
+471  cd logs
+472  ls -l
+473  cd /etc/systemd/system
+474  nano nginx.service
+475  cd
+476  cd /opt/nginx/conf/
+477  nano nginx.conf
+478  cd /etc/systemd/system
+479  service nginx status
+480  systemctl daemon-reload
+481  service nginx status
+482  service nginx restart
+483  service nginx status
+484  exit
+485  rails c
+486  cd letsencrypt-api/
+487  rails c
+488  ps aux | grep sidekiq
+489  rails c
+490  ps aux | grep sidekiq
+491  rails c
+492  vim app/sidekiq/letsencrypt_job.rb
+493  rails c -e development
+494  ls
+495  cd log/
+496  ls
+497  cd /var/log/syslog
+498  cd
+499  vim /etc/systemd/system/sidekiq.service
+500  grep -ir "syslog" .
+501  cd letsencrypt-api/
+502  vim config/sidekiq.yml
+503  sidekiq --help
+504  ls
+505  rails c
+506  ps aux  | grep sidekiq
+507  touch tmp/restart.txt
+508  vim /etc/systemd/system/sidekiq.service
+509  cd app/sidekiq/letsencrypt_job.rb
+510  vim  app/sidekiq/letsencrypt_job.rb
+511  rails c
+512  vim  config/application.rb
+513  touch tmp/restart.txt
+514  rails c
+515  cat ~/.bashrc
+516  exit
+517  service nginx.service status
+518  service nginx.service restart
+519  service nginx.service status
+520  ps aux | grep nginx
+521  kill -9 4966 4967
+522  service nginx.service start
+523  ps aux | grep nginx
+524  tail -f /opt/nginx/logs/error.log
+525  cd letsencrypt-api/
+526  ls
+527  service nginx status
+528  service nginx.service status
+529  service nginx.service restart
+530  service nginx.service status
+531  service nginx status
+532  service nginx restart
+533  service nginx status
+534  vim ~/.bashrc
+535  exit
+536  cd letsencrypt-api/
+537  cat /etc/hosts
+538  ps aux | grep redis
+539  cat ~/.bashrc
+540  raisl c
+541  rails c
+542  vim config/initializers/sidekiq.rb
+543  rails c
+544  touch tmp/restart.txt
+545  rails c
+546  vim ~/.bashrc
+547  exit
+548  service nginx status
+549  ps -aux | grep nginx
+550  service nginx restart
+551  ps -aux | grep nginx
+552  service status apache
+553  apache --version
+554  nano /etc/systemd/system/nginx.service
+555  cd /opt/nginx/
+556  ls -l
+557  cd conf/
+558  nano nginx.conf
+559  cd ..
+560  cd sbin/
+561  ./nginx -t
+562  service nginx restrat
+563  service nginx restart
+564  systemctl daemon-reload
+565  service nginx restart
+566  service nginx status
+567  ps -aux | grep nginx
+568  kill -9 10744
+569  kill -9 10745
+570  service nginx restart
+571  service nginx status
+572  cd
+573  grep -ir "redis/0" .
+574  ls -l
+575  cd letsencrypt-api/
+576  ls -l
+577  grep -ir "redis/0" .
+578  grep -ir "redis/" .
+579  grep -ir "redis/1" .
+580  grep -ir "redis/2" .
+581  service nginx status
+582  service nginx restart
+583  service nginx status
+584  service nginx stop
+585  service nginx status
+586  service nginx start
+587  service nginx status
+588  service nginx restart
+589  service nginx status
+590  cd letsencrypt-api/
+591  vim config/initializers/sidekiq.rb
+592  touch tmp/restart.txt
+593  rails c
+594  vim config/initializers/sidekiq.rb
+595  touch tmp/restart.txt
+596  rails c
+597  vim app/sidekiq/letsencrypt_job.rb
+598  touch tmp/restart.txt
+599  vim config/application.rb
+600  touch tmp/restart.txt
+601  vim config/sidekiq.yml
+602  vim vim app/sidekiq/letsencrypt_job.rb
+603   vim app/sidekiq/letsencrypt_job.rb
+604  touch tmp/restart.txt
+605  rails generate controller Certificates index create show update
+606  nano app/controllers/certificates_controller.rb
+607  nano config/routes.rb
+608  rails routes
+609  ls
+610  nano config/initializers/letsencrypt.rb
+611  ls
+612  cd lib/
+613  ls
+614  nano letsencrypt.rb
+615  ls
+616  mkdir letsencrypt
+617  c letsencrypt
+618  ls
+619  cd letsencrypt
+620  ls
+621  nano configuration.rb
+622  nano version.rb
+623  nano redis.rb
+624  nano logger_proxy.rb
+625  ls
+626  cd ..
+627  ls
+628  cd vim letsencrypt.rb
+629  vim letsencrypt.rb
+630  cd ..
+631  rails c
+632  vim config/initializers/sidekiq.rb
+633  vim config/initializers/letsencrypt.rb
+634  nano config/initializers/letsencrypt.rb
+635  ls
+636  cd /etc/systemd/system
+637  ls
+638  cat nginx.service
+639  pwd
+640  ls
+641  cat sidekiq.service
+642  cd
+643  cd letsencrypt-api/
+644  ls
+645  rails generate model certificate
+646  nano  db/migrate/20220914110606_create_certificates.rb
+647  rails db:migrate:status
+648  rails db:migrate
+649  vim app/models/certificate.rb
+650  ls
+651  nano app/models/concerns/certificate_issuable.rb
+652  cd app/models/concerns/
+653  ls
+654  cd ..
+655  ls
+656  cd concerns/
+657  ls
+658  nano certificate_verifiable.rb
+659  cd ..
+660  ls
+661  nano certificate.rb
+662  ls
+663  cd ..
+664  ls
+665  cd views/
+666  ls
+667  cd welcome/
+668  ls
+669  nano index.html.erb
+670  cd ../..
+671  ls
+672  cd ..
+673  touch tmp/restart.txt
+674  rails c
+675  rails db:migrate
+676  rails db:migrate:status
+677  cd app/models/
+678  vim certificate.rb
+679  rails c
+680  nano app/models/certificate.rb
+681  cd
+682  cd letsencrypt-api/
+683  nano app/models/certificate.rb
+684  rails c
+685  bundle
+686  cat ~/.bashrc
+687   RAILS_ENV=production rails c
+688   RAILS_ENV=development rails c
+689   RAILS_ENV=development rails db:create
+690   RAILS_ENV=development rails db:migrate
+691   RAILS_ENV=development rails c
+692   rails c
+693  spring stop
+694   rails c
+695  rails generate sidekiq:job RenewCertificates
+696  rails generate sidekiq:job Letsencrypt
+697  vim app/sidekiq/letsencrypt_job.rb
+698  rails c
+699  cat app/sidekiq/letsencrypt_job.rb
+700  vim app/sidekiq/letsencrypt_job.rb
+701  rails c
+702  service sidekiq.service status
+703  service sidekiq.service restart
+704  rails c
+705  cd /etc/systemd/system
+706  ls
+707  cat sidekiq.service
+708  vim sidekiq.service
+709  systemctl daemon-reload
+710  service sidekiq.service status
+711  service sidekiq.service restart
+712  service sidekiq.service status
+713  cd
+714  cd letsencrypt-api/
+715  rails c
+716  rails c -e development
+717  vim config/application.rb
+718  rails c
+719  ls
+720  cd log/
+721  ls
+722  ll
+723  tail -f production.log
+724  ls
+725  cd
+726  cd letsencrypt-api/app/jobs/
+727  ls
+728  cd ..
+729  cd sidekiq/
+730  ls
+731  vim letsencrypt_job.rb
+732  cd ..
+733  ls
+734  cd ..
+735  ls
+736  vim config/sidekiq.yml
+737  service sidekiq.service status
+738  service sidekiq.service restart
+739  service sidekiq.service status
+740  ls
+741  cd log/
+742  ls
+743  cat letsencrypt-api/config/application.rb
+744  service sidekiq.service status
+745  service sidekiq.service stop
+746  service sidekiq.service status
+747  bundle exec sidekiq -e production -C config/sidekiq.yml
+748  cd letsencrypt-api/
+749  bundle exec sidekiq -e production -C config/sidekiq.yml
+750  bundle exec sidekiq -e development -C config/sidekiq.yml
+751  bundle exec sidekiq -e development -C config/sidekiq.yml  --logfile log/sidekiq_1.log
+752  bundle exec sidekiq -e production -C config/sidekiq.yml
+753  bundle exec sidekiq -e production -g certificates -C config/sidekiq.yml
+754  vim config/sidekiq.yml
+755  bundle exec sidekiq -e production -g certificates -C config/sidekiq.yml
+756  cat /etc/systemd/system/sidekiq.service
+757  service sidekiq start
+758  service sidekiq status
+759  cat /etc/systemd/system/nginx.service
+760  sidekiq -v
+761  ps aux | grep sidekiq
+762  ls
+763  tail -f log/production.log
+764  cd /opt/nginx/logs/
+765  tail -f access.log
+766  tail -f error.log
+767  cd letsencrypt-api/
+768  vim config/initializers/letsencrypt.rb
+769  ls
+770  cd config/initializers/
+771  ls
+772  nano letsencrypt.rb
+773  cat sidekiq.rb
+774  nano letsencrypt.rb
+775  cd
+776  cd letsencrypt-api/
+777  ls
+778  config/
+779  ls
+780  cd config
+781  ls
+782  vim routes.rb
+783  cat routes.rb
+784  rails routes
+785  cd
+786  cd letsencrypt-api/
+787  touch tmp/restart.txt
+788  rails c
+789  ls
+790  cd app/controllers/
+791  ls
+792  nano verifications_controller.rb
+793  cd
+794  cd letsencrypt-api/
+795  ls
+796  touch tmp/restart.txt
+797  rails c
+798  Spring stop
+799  spring stop
+800  rails c
+801  ls
+802  cd app/models/
+803  ls
+804  cd ..
+805  ls
+806  cd sidekiq/
+807  ls
+808  nano renew_certificates_job.rb
+809  rails c
+810  spring stop
+811  rails c
+812  spring stop
+813  history | grep spring
+814  spring stop
+815  cd ..
+816  spring stop
+817  rails c
+818  cd lib/tasks/
+819  ls
+820  nano letsencrypt_tasks.rake
+821  cd
+822  cd letsencrypt-api/
+823  ls
+824  pwd
+825  crontab -e
+826  crontab -l
+827   RAILS_ENV=production rake letsencrypt:renew
+828  rails c
+829  ls
+830  cd lib/
+831  ls
+832  cd
+833  ls
+834  cd letsencrypt-api/
+835  ls
+836  cd app/sidekiq/
+837  ls
+838  cat renew_certificates_job.rb
+839  bundle exec sidekiq -e production -g certificates -C config/sidekiq.yml
+840  cd letsencrypt-api/
+841  bundle exec sidekiq -e production -g certificates -C config/sidekiq.yml
+842  ps aux  | grep sidekiq
+843  service sidekiq status
+844  service sidekiq start
+845  service sidekiq status
+846  exit
+847  cd letsencrypt-api/
+848  ls
+849  cd app/sidekiq/
+850  ls
+851  cat renew_certificates_job.rb
+852  vim renew_certificates_job.rb
+853  rails c
+854  cd ../..
+855  ls
+856  spring stop
+857  rails c
+858  vim app/sidekiq/renew_certificates_job.rb
+859  vim config/application.rb
+860  rails c
+861  vim app/sidekiq/renew_certificates_job.rb
+862  rails c
+863  spring stop
+864  rails c
+865  ls
+866  cat config/application.rb
+867  rails generate job Example
+868  vim app/jobs/example_job.rb
+869  rails c
+870  spring stop
+871  rails c
+872  rails d job Example
+873  ls
+874  vim app/sidekiq/renew_certificates_job.rb
+875  vim app/sidekiq/letsencrypt_job.rb
+876  service sidekiq status
+877  service sidekiq stop
+878  ls
+879  spring stop
+880  cat app/sidekiq/letsencrypt_job.rb
+881  rails c
+882  vim config/application.rb
+883  vim app/sidekiq/renew_certificates_job.rb
+884  sping stop
+885  spring stop
+886  rails c
+887  vim lib/letsencrypt/redis.rb
+888  nano lib/letsencrypt/redis.rb
+889  rails c
+890  nano lib/letsencrypt/redis.rb
+891  rails c
+892  ls
+893  cd letsencrypt-api/
+894  ls
+895  cd app/sidekiq/
+896  ls
+897  cat
+898  cat  letsencrypt_job.rb
+899  cd ..
+900  ls
+901  rails c
+902  ls
+903  rails generate sidekiq:job GetCertificate
+904  vim app/sidekiq/get_certificate_job.rb
+905  rails c
+906  spring stop
+907  rails c
+908  cd letsencrypt-api/
+909  ls
+910  spring stop
+911  rails c
+912  exit
+913  ls
+914  cd letsencrypt-api/
+915  ls
+916  cd app/models/
+917  ls
+918  vim certificate.rb
+919  spring stop
+920  rails c
+921  cd ..
+922  ls
+923  cd ..
+924  ls
+925  spring stop
+926  rails c
+927  vim app/models/concerns/certificate_verifiable.rb
+928  spring stop
+929  rails c
+930  vim app/models/concerns/certificate_verifiable.rb
+931  rails c
+932  pwd
+933  spring stop
+934  rails c
+935  vim app/models/concerns/certificate_verifiable.rb
+936  vim app/sidekiq/get_certificate_job.rb
+937  spring stop
+938  rails c
+939  service sidekiq restart
+940  service sidekiq status
+941  spring stop
+942  rails c
+943  cat app/sidekiq/get_certificate_job.rb
+944  rails c
+945  vim app/sidekiq/get_certificate_job.rb
+946  spring stop
+947  rails c
+948  service sidekiq restart
+949  rails c
+950  vim app/sidekiq/get_certificate_job.rb
+951  spring stop
+952  service sidekiq restart
+953  rails c
+954  vim app/controllers/certificates_controller.rb
+955  touch tmp/restart.txt
+956  service sidekiq restart
+957  rails c
+958  spring stop
+959  rails c
+960  vim app/controllers/certificates_controller.rb
+961  vim app/sidekiq/get_certificate_job.rb
+962  service sidekiq restart
+963  touch tmp/restart.txt
+964  rails c
+965  spring stop
+966  rails c
+967  ls
+968  cd letsencrypt-api/
+969  ls
+970  vim config/routes.rb
+971  touch tmp/restart.txt
+972  cd letsencrypt-api/
+973  rails c
+974  cd /opt/nginx/conf/
+975  cat nginx.conf
+976  cat /etc/systemd/system/nginx.service
+977  ping 10.26.251.201
+
+~/.bashrc 
+export RAILS_ENV=production
+export RAILS_MASTER_KEY=9e00c1c548658b9f1acb57005fe065d7
+export REDIS_URL_SIDEKIQ="redis://127.0.0.1:6379/1"
