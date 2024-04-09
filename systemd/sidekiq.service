@@ -1,0 +1,20 @@
+# /etc/systemd/system/sidekiq.service
+
+
+[Unit]
+Description=provision_certificates
+[Service]
+User=root
+WorkingDirectory=/root/letsencrypt-api
+Environment=RAILS_ENV=production
+#ExecStart=/bin/bash -lc 'bundle exec sidekiq -q provision_certificates -c 1 -e production -g certificates -P /root/letsencrypt-api/tmp/pids/workers.pid -L /root/letsencrypt-api/log/workers.log'
+ExecStart=/bin/bash -lc 'bundle exec sidekiq -e production -g certificates -C config/sidekiq.yml'
+ExecReload=/usr/bin/kill -TSTP $MAINPID
+ExecStop=/bin/kill -TERM $MAINPID
+StandardInput=null
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=sidekiq
+KillMode=mixed
+TimeoutStopSec=5
+# Use `systemctl kill -s TSTP sidekiq` to quiet the Sidekiq process
